@@ -64,6 +64,7 @@ export default function Home() {
           alt={name}
         />
         <h4>{name}</h4>
+        <h4>{email}</h4>
         <Button variant="danger" onClick={handleLogout}>
           Logout
         </Button>
