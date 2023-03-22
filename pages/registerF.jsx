@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import styles from "../styles/Form.module.css";
 
-export default function login() {
+export default function RegisterF() {
   const router = useRouter();
   const [initial, setInitial] = useState(true);
   const [inputs, setInputs] = useState({ vehicleType: "car", type: "learner" });
@@ -24,7 +24,7 @@ export default function login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    for (let i = 1; i < 100; i++) {
+    for (let i = 1; i <= 8; i++) {
       const puts = { ...inputs };
       const id = `fake-${puts.vehicleType}-${puts.type}-${i}`;
       puts.name = id;
@@ -41,18 +41,21 @@ export default function login() {
           body: formData,
         });
         const result = await res.json();
-
       } catch (err) {
         toast.error("Something is Wrong!");
       }
     }
   };
 
-  useEffect(() => {
-    const user = localStorage.getItem("user");
-    if (user) router.push("/");
-    else setInitial(false);
-  }, []);
+  useEffect(
+    () => {
+      const user = localStorage.getItem("user");
+      if (user) router.push("/");
+      else setInitial(false);
+    },
+    //eslint-disable-next-line
+    []
+  );
 
   if (initial) return "";
 

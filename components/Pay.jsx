@@ -67,15 +67,19 @@ export default function Pay({ user }) {
     setLoading(false);
   };
 
-  useEffect(() => {
-    fetch(`${baseURL}/create-payment-intent`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ vehicleType, email }),
-    })
-      .then((res) => res.json())
-      .then((data) => setClientSecret(data.clientSecret));
-  }, []);
+  useEffect(
+    () => {
+      fetch(`${baseURL}/create-payment-intent`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ vehicleType, email }),
+      })
+        .then((res) => res.json())
+        .then((data) => setClientSecret(data.clientSecret));
+    },
+    //eslint-disable-next-line
+    []
+  );
 
   if (paymentSuccess)
     return (

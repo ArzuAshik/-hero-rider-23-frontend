@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 import styles from "./ProfilePic.module.css";
 
@@ -18,7 +19,7 @@ export default function ProfilePic({ onChange = fn }) {
   return (
     <div className={styles.container}>
       <label className={styles["image-container"]}>
-        {input && <img className={styles.img} src={input} />}
+        {input && <Image width={150} height={150} className={styles.img} src={input} alt="Avatar" />}
         <input
           onChange={handleChange}
           className={styles.input}

@@ -12,7 +12,7 @@ export default function Rider({ user }) {
       <h4>
         Driving Licence:{" "}
         <Button>
-          <a target="_blank" href={`http://localhost:5000/uploads/${drivingLicence}`}>View</a>
+          <a target="_blank" href={`https://hero-rider-23.herokuapp.com/uploads/${drivingLicence}`}>View</a>
         </Button>
       </h4>
     </div>
