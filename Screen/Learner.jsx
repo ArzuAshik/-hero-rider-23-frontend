@@ -12,7 +12,7 @@ export default function Learner({ user }) {
   return (
     <Elements stripe={stripePromise}>
       <div>
-        <h2 style={{ textAlign: "center" }}>Rider Info</h2>
+        <h2 style={{ textAlign: "center" }}>Learner Info</h2>
         {payment ? (
           <h4>Paid: ${payment}</h4>
         ) : (
