@@ -1,0 +1,13 @@
+.container {
+  margin: 8px 0;
+}
+
+.title {
+  font-size: 1rem;
+  color: #575252;
+  margin-bottom: 4px;
+}
+.input {
+  padding: 8px 4px;
+  width: 100%;
+}

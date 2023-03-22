@@ -1,0 +1,28 @@
+.form-container {
+  margin: 16px auto;
+  max-width: 700px;
+  padding: 16px;
+  background: white;
+  box-shadow: 5px 5px 5px gray;
+  border-radius: 6px;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.section {
+  border: 1px dashed gray;
+  border-radius: 8px;
+  padding: 4px 0;
+  margin: 8px 0;
+}
+.section-title {
+  text-align: center;
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
+.form {
+}

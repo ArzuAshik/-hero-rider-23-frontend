@@ -1,0 +1,26 @@
+.primary {
+  background: #42a5f5;
+  color: white;
+}
+.success {
+  background: #4caf50;
+  color: white;
+}
+.danger {
+  background: #ef5350;
+  color: white;
+}
+.btn {
+  padding: 8px 16px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  background: gray;
+  color: lightgray;
+  cursor: not-allowed;
+}
